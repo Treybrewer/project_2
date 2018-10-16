@@ -1,0 +1,39 @@
+/* --- Global style --- */
+* {
+    box-sizing: border-box;
+}
+
+/* --- Header Class --- */
+.header {
+    width: 100%;
+    Height: 1000px;
+
+}
+/* --- Header Overlay --- */
+
+/* --- Navbar --- */
+
+.navbar {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    transition: ease-in-out .5s;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 50px;
+    color: whitesmoke;
+    font-size: 24px;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+    
+}
+
+.navbar ul li:hover {
+    color: #ff9933
+
+}
