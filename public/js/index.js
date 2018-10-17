@@ -33,7 +33,71 @@ window.smoothScroll = function(target) {
     }
     // start scrolling
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+};
+
+function initMap() {
+    var options = {
+        zoom: 13,
+        center: { lat: 35.2271, lng: -80.8431 }
+    }
+    var map = new
+        google.maps.Map(document.getElementById('map'), options);
+
+    google.maps.event.addListener(map, 'click',
+
+        function (event) {
+            var lat = event.latLng.lat();
+            var lng = event.latLng.lng();
+            console.log(lat, lng);
+            addMarker(lat, lng);
+        }
+    );
+
+
+
+
+
+
+    function addMarker(lat, lng) {
+        // this will add a marker to the map given the lat/lng of the on click position
+        var marker = new google.maps.Marker({
+            position: { lat, lng },
+            map: map,
+        });
+        // this will create an editable info window 
+        var infowindow = new google.maps.InfoWindow({
+            maxWidth: 200,
+            content: '<div id="infoWindowInput" contentEditable="true">changeme...</div>',
+        });
+        // will open info window with a click on the marker
+        marker.addListener('click', function () {
+
+            infowindow.open(map, marker);
+        });
+        // hopefully will log out content added to info window
+        // infowindow.addListener('click', function () {
+        //     console.log("fired1");
+        //     windowInputCapture();
+        // });
+
+        google.maps.event.addListener(infowindow, "closeclick", function () {
+            console.log('trigger close');
+            console.log($("infoWindowInput").val());
+            windowInputCapture();
+        });
+
+
+    };
+
+
+    function windowInputCapture() {
+        console.log("fired2");
+        var capture = $("#infoWindowInput").val();
+        
+    };
+
+
+};
 
 
 
