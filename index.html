@@ -25,27 +25,37 @@
     <div class="navbar" id='nav'>
         <ul>
             <li id='name'>PHOTOSPOT</li>
-            <li><i class="material-icons" id='addPhoto'onclick="smoothScroll(document.getElementById('video'))">
+            <li>
+                <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
                     <a href="#">add_a_photo</a>
-                </i></li>
-            <li><i class="material-icons" id='search'>
+                </i>
+            </li>
+            <li>
+                <i class="material-icons" id='search'>
                     search
-                </i></li>
+                </i>
+            </li>
 
-            <li><i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
+            <li>
+                <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
                     place
-                </i></li>
+                </i>
+            </li>
 
-            <li><i class="material-icons" id='profile'>
+            <li>
+                <i class="material-icons" id='profile'>
                     account_circle
-                </i></li>
+                </i>
+            </li>
         </ul>
     </div>
 
     <div class='map-container'>
-        
-    </div>
 
+    </div>
+    <div id="map">
+
+    </div>
     <div class='photo-container' id='userPhotos'>
 
     </div>
@@ -53,6 +63,9 @@
 
 
     <script type="text/javascript" src="public/js/index.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjbDoKRMqTrnjd-CZ4u6vp3l5UR1e2b84&callback=initMap"
+        type="text/javascript">
+        </script>
 </body>
 
 </html>
