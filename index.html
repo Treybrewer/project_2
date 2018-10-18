@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="video-header">
+            <div class="video-wrap" id='video'>
+                <video autoplay muted loop>
+                    <source src="public/assets/movie/2015-12-02-explore.mp4" type="video/mp4">
+                    <source src="public/assets/movie/2015-12-02-explore.mp4" type="video/ogg">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="navbar" id='nav'>
+        <ul>
+            <li id='name'>PHOTOSPOT</li>
+            <li>
+                <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
+                    <a href="#">add_a_photo</a>
+                </i>
+            </li>
+            <li>
+                <i class="material-icons" id='search'>
+                    search
+                </i>
+            </li>
+
+            <li>
+                <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
+                    place
+                </i>
+            </li>
+
+            <li>
+                <i class="material-icons" id='profile'>
+                    account_circle
+                </i>
+            </li>
+        </ul>
+    </div>
+
+    <div class='map-container'>
+
+    </div>
+    <div id="map">
+
+    </div>
+    <div class='photo-container' id='userPhotos'>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="public/js/index.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjbDoKRMqTrnjd-CZ4u6vp3l5UR1e2b84&callback=initMap"
+        type="text/javascript">
+        </script>
+</body>
+
+</html>
