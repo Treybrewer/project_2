@@ -1,0 +1,141 @@
+@font-face {
+        font-family: 'Lato', sans-serif;
+        src: url("https://fonts.googleapis.com/css?family=Lato");
+}
+
+/* --- Navbar --- */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    transition: ease-in-out .5s;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    top: 0px;
+    color: whitesmoke;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navbar ul li:hover {
+    color: #3cc47c;
+}
+/* --- Globally --- */
+a { 
+    text-decoration: none;
+    color: whitesmoke; 
+    transition: ease-in-out .3s;
+} 
+
+/* --- Each state --- */
+
+a:visited { 
+    text-decoration: none; 
+    
+}
+a:hover { 
+    text-decoration: none; 
+    color: #3cc47c;
+}
+a:focus { 
+    text-decoration: none; 
+}
+a:hover, a:active { 
+    text-decoration: none; 
+    transform: scale(1.3);
+}
+
+body{
+    /* fallback for old browsers */
+    background: #8e9eab;  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); 
+    font-family: "Lato";
+    
+}
+/* targets container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+  }
+/* targets user information box */
+  #userInfo {
+      background: whitesmoke;
+      border: 1px solid  whitesmoke;
+      border-radius: 4px;
+      height: 300px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+/* targets user image box */
+  #userImage {
+    border-radius: 25px;
+    background-position: center;
+    width: 300px;
+    height: 300px; 
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);  
+  }
+  /* h1 (name) font properties */
+  h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      line-height: normal;
+  }
+
+  h6 {
+      font-size: 12px;
+      font-weight: lighter;
+      line-height: 30px;
+
+  }
+
+  h2 {
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 50px;
+
+}
+
+.banner-text h1, 
+.banner-text h2,
+.banner-text h6 {
+    margin: 0;
+    text-align: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-decoration: none;
+    border: none;
+
+}
+button {
+    background: #8e9eab;  
+    text-decoration: none;
+    border: none;
+    outline: none;
+    align-items: center;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+
+}
+
