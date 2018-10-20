@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
     // Giving the Users model a name of type STRING
     user_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
     },

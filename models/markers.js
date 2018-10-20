@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     var Markers = sequelize.define("Markers", {
       // Giving the Markers model a name of type STRING
       id: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
       },
@@ -28,10 +28,13 @@ module.exports = function(sequelize, DataTypes) {
       type:{
         type: DataTypes.STRING,
         allowNull: false
-
       }
     });
-  
+
+    Markers.associate = function(models) {
+      // Associating Markers with photos
+      Markers.hasMany(models.Photos);
+    };
     return Markers;
   };
   

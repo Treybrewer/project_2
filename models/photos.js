@@ -1,16 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
   var Photos = sequelize.define("Photos", {
     photo_id: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    user_id: {
-      type: DataTypes.INT,
+    user_id: {//I dont think this is needed. In routes, User is defined as HasMany photos and Photos belongsTo Users
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    marker_id: {
-      type: DataTypes.INT,
+    marker_id: {//I dont think this is needed. In routes, User is defined as HasMany photos and Photos belongsTo Users
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     photo_url: {
@@ -21,10 +21,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     date: {
       type: DataTypes.DATE,
-    },
-    time: {
-      type: DataTypes.TIME,
-    },
+    }
+    // time: {
+    //   type: DataTypes.TIME,
+    // },
     
 
 
