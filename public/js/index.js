@@ -3,10 +3,11 @@ const nav = document.getElementById('nav');
     window.onscroll = function() {
         if (window.pageYOffset > 100) {
             nav.style.background = "#4D4e4f";
-            nav.style.boxShadow = "0px 4px 2px #33333"
+            nav.style.boxShadow = "0px 4px 2px #33333";
+            nav.style.opacity = ".9";
         } else  {
             nav.style.background = "transparent";
-            nav.style.boxShadow = "0px 4px 2px #33333"
+            nav.style.boxShadow = "0px 4px 2px #33333";
         } 
     }
 
@@ -80,6 +81,8 @@ function initMap() {
         marker.addListener('click', function () {
 
             infowindow.open(map, marker);
+            smoothScroll(document.getElementById('userPhotos'));
+            
         });
         // hopefully will log out content added to info window
         // infowindow.addListener('click', function () {
@@ -105,6 +108,7 @@ function initMap() {
 
 
 };
+
 
 
 
