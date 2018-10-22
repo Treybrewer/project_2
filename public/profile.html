@@ -11,22 +11,39 @@
     <title>Profile</title>
 </head>
 <body>
-    <div class="navbar" id='nav'>
-        <ul>
-            <li><i class="material-icons" id='addPhoto'>
-                    <a href="#">add_a_photo</a>
-                </i></li>
-            <li><i class="material-icons" id='search'>
-                    search
-                </i></li>
-            <li><i class="material-icons" id='goToMap'>
-                    place
-                </i></li>
-            <li><i class="material-icons" id='profile'>
-                    account_circle
-                </i></li>
-        </ul>
-    </div>
+        <div class="navbar" id='nav'>
+                <ul>
+                    <li id='name'><a href="index.html">PHOTO</a>
+                        <i class="material-icons" id='logo'>
+                            camera
+                        </i>
+                        <a href="profile.html">NEST</li></a>
+                    <li>
+                        <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
+                            <a href="">add_a_photo</a>
+                        </i>
+                    </li>
+                    <li>
+                        <i class="material-icons" id='search'>
+                            search
+                        </i>
+                    </li>
+        
+                    <li>
+                        <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
+                            place
+                        </i>
+                    </li>
+        
+                    <li>
+                        <i class="material-icons" id='profile'>
+                            <a href="profile.html">
+                                account_circle
+                        </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
     <div class="flex-container">
         <div class="card" id="userImage">
             <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1914098_10156750976590571_6955578944830398969_n.jpg?_nc_cat=105&_nc_eui2=AeHhWP3KV8p9uecvwmohIuiG4Dq-9yriY7VaV2kmyuizjiMPHVsyRqfSSf4UCbNapCOgyKaVEvtUqdz6NMDUyRRZ2dIlTOq8tQsvlmLcpPdjZg&oh=fdca8a3abc2904249e02beecff37b260&oe=5C548324"
