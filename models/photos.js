@@ -19,6 +19,9 @@ module.exports = function(sequelize, DataTypes) {
     city: {
       type: DataTypes.STRING,
     },
+    photog_notes: {
+      type: DataTypes.STRING,
+    },
     date: {
       type: DataTypes.DATE,
     }

@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static("./public"));
 
 //Natalie --> commenting out requiring of the html and api files until ready. Causing errors.
-// require("./routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
 require("./routes/user-api-routes.js")(app);
