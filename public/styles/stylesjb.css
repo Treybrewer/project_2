@@ -51,6 +51,17 @@ a:hover, a:active {
     text-decoration: none; 
     transform: scale(1.3);
 }
+/* --- targets aperature icon --- */
+#logo {
+    font-size: 20px;
+    color: whitesmoke;
+    transition: ease-in-out .3s;
+}
+
+#logo:hover {
+    transform: scale(1.3);
+    color: #77c9d4;
+}
 
 body{
     /* fallback for old browsers */
