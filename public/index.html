@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="jquery-3.3.1.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
@@ -23,41 +24,49 @@
         </div>
     </div>
     <div class="navbar" id='nav'>
-        <ul>
-            <li id='name'>PHOTOSPOT</li>
-            <li>
-                <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
-                    <a href="#">add_a_photo</a>
-                </i>
-            </li>
-            <li>
-                <i class="material-icons" id='search'>
-                    search
-                </i>
-            </li>
+            <ul>
+                <li id='name'><a href="index.html">PHOTO</a>
+                    <i class="material-icons" id='logo'>
+                        camera
+                    </i>
+                    <a href="profile.html">NEST</li></a>
+                <li>
+                    <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
+                        <a href="">add_a_photo</a>
+                    </i>
+                </li>
+                <li>
+                    <i class="material-icons" id='search'>
+                        search
+                    </i>
+                </li>
+    
+                <li>
+                    <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
+                        place
+                    </i>
+                </li>
+    
+                <li>
+                    <i class="material-icons" id='profile'>
+                        <a href="profile.html">
+                            account_circle
+                    </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    <div class='map-wrapper'>
+        <div class='map-container'>
+            <div id='map'>
 
-            <li>
-                <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
-                    place
-                </i>
-            </li>
-
-            <li>
-                <i class="material-icons" id='profile'>
-                    account_circle
-                </i>
-            </li>
-        </ul>
-    </div>
-
-    <div class='map-container'>
-
-    </div>
-    <div id="map">
-
+            </div>
+        </div>
     </div>
     <div class='photo-container' id='userPhotos'>
-
+            <h2>PHOTOS TAKEN HERE</h2>
+        </div>
     </div>
 
 
