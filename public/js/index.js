@@ -37,6 +37,13 @@ window.smoothScroll = function(target) {
 };
 
 function initMap() {
+    // $.ajax({
+    //     method: "GET",
+    //     url: "/api/markers/"
+    //   }).then(
+    //       console.log(res)
+    //   );
+
     var options = {
         zoom: 13,
         center: { lat: 35.2271, lng: -80.8431 }
