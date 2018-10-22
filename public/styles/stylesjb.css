@@ -138,9 +138,8 @@ body{
     padding: 14px;
 }
 
-button ,
-.cancelbtn,
-.signupbtn {
+button,
+.submit {
     background: #8e9eab;  
     text-decoration: none;
     border: none;
@@ -156,14 +155,11 @@ button ,
 
 }
 
-.cancelbtn,
-.signupbtn {
+.submit {
     font-size: 16px;
     color: white;
 }
-
-.cancelbtn:hover,
-.signupbtn:hover {
+.submit:hover {
     font-size: 16px;
     color: #3cc47c;
 }

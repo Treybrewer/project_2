@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/stylesjb.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="navbar" id='nav'>
+        <ul>
+            <li><i class="material-icons" id='addPhoto'>
+                    <a href="#">add_a_photo</a>
+                </i></li>
+            <li><i class="material-icons" id='search'>
+                    search
+                </i></li>
+            <li><i class="material-icons" id='goToMap'>
+                    place
+                </i></li>
+            <li><i class="material-icons" id='profile'>
+                    account_circle
+                </i></li>
+        </ul>
+    </div>
+
+
+    <form action="action_page.php">
+            <div class="form-container">
+              <h1>Please fill in photograph information.</h1>
+              <hr>
+
+              <label for="photogName"></label>
+              <input type="text" placeholder="Photographer Name" name="photogName" required>
+              
+              <label for="username"></label>
+              <input type="text" placeholder="Username" name="username" required>
+          
+              <label for="email"></label>
+              <input type="text" placeholder="Email" name="email" required>
+          
+              <label for="date"></label>
+              <input type="password" placeholder="Date Taken" name="date" required>
+          
+              <label for="photogNotes"></label>
+              <input type="notes" placeholder="Photograher Notes (Max 250 characters)" name="photogNotes" required>
+          
+          
+          
+              <div class="clearfix">
+                <button type="submit" class="submit" style="color: 3cc47c">Submit</button>
+              </div>
+            </div>
+          </form>
+          
+
+    
+    
+    <script type="text/javascript" src="profile.js"></script>
+</body>
+</html>
