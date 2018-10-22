@@ -9,6 +9,7 @@ module.exports = function(app) {
       include: [db.Photos]
     }).then(function(dbMarkers) {
       res.json(dbMarkers);
+      console.log(`findAll markers: ${res}`);
     });
   });
 
