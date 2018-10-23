@@ -96,7 +96,7 @@ function initMap() {
                 var lat = data[i].lat;
                 var lng = data[i].lng
                 
-                google.maps.event.addDomListener(window, 'click', addMarker(lat,lng));
+                google.maps.event.addListener(map, 'click', addMarker(lat, lng));
 
             };
 
