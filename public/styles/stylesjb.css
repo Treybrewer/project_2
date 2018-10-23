@@ -83,7 +83,9 @@ body{
     margin-top: 180px;
   }
 /* targets user information box */
-  #userInfo {
+
+  #userInfo,
+  #photogInfo {
       background: whitesmoke;
       border: 1px solid  whitesmoke;
       border-radius: 4px;
@@ -93,7 +95,8 @@ body{
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 /* targets user image box */
-  #userImage {
+  #userImage,
+  #newPhoto {
     border-radius: 25px;
     background-position: center;
     width: 300px;
@@ -140,7 +143,7 @@ body{
 
 /* CSS for form.html */
 
-.form-container {
+#userInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,9 +152,8 @@ body{
     padding: 14px;
 }
 
-button ,
-.cancelbtn,
-.signupbtn {
+button,
+.submit {
     background: #8e9eab;  
     text-decoration: none;
     border: none;
@@ -163,51 +165,86 @@ button ,
     cursor: pointer;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
     margin: 10px
-
-
 }
 
-.cancelbtn,
-.signupbtn {
+.submit {
     font-size: 16px;
     color: white;
 }
-
-.cancelbtn:hover,
-.signupbtn:hover {
+.submit:hover {
     font-size: 16px;
     color: #3cc47c;
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 50%;
-    padding: 15px;
+/* photographer information */
+
+#photogInfo {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
+}
+  
+  label {
+      font-size: .85rem;
+      text-transform: uppercase;
+      color: #ccc;
   }
   
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
+ .form-control {
+     display: block;
+     background-color: transparent;
+     border-top: 0;
+     border-right: 0;
+     border-left: 0;
+     border-radius: 0;
+     margin-bottom: 3px; 
+ }
+    [type="text"] {color:#111;}
+    [type="notes"] {color: #111;}
+  
+  textarea {
+    width: 90%;
+    height: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: transparent;
+    font-size: 12px;
+    resize: none;
+    margin-top: 3px;
   }
-  
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-  
-  button:hover {
-    opacity:1;
-  }
-  
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  
+/* --- Map container --- */
+.map-container {
+    max-width: 75%;
+    height: 260px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+    /* margin-top: 250px; */
+    text-align: center;    
+}
+
+/* --- Targets div for map --- */
+.map-wrapper {
+    background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 800px;
+}
+
+/* --- div for photos that will populate from map --- */
+.photo-container {
+    max-width: 100%;
+    height: 500px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+    /* margin-top: 250px; */
+    text-align: center;
+    border-top: 20px solid #3cc47c;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}

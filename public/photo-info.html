@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/stylesjb.css">
+    <title>Profile</title>
+</head>
+<body>
+        <div class="navbar" id='nav'>
+                <ul>
+                    <li id='name'><a href="index.html">PHOTO</a>
+                        <i class="material-icons" id='logo'>
+                            camera
+                        </i>
+                        <a href="profile.html">NEST</li></a>
+                    <li>
+                        <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
+                            <a href="">add_a_photo</a>
+                        </i>
+                    </li>
+                    <li>
+                        <i class="material-icons" id='search'>
+                            search
+                        </i>
+                    </li>
+        
+                    <li>
+                        <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
+                            place
+                        </i>
+                    </li>
+        
+                    <li>
+                        <i class="material-icons" id='profile'>
+                            <a href="profile.html">
+                                account_circle
+                        </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+    <div class="flex-container">
+            <div class="card" id="newPhoto">
+                    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1914098_10156750976590571_6955578944830398969_n.jpg?_nc_cat=105&_nc_eui2=AeHhWP3KV8p9uecvwmohIuiG4Dq-9yriY7VaV2kmyuizjiMPHVsyRqfSSf4UCbNapCOgyKaVEvtUqdz6NMDUyRRZ2dIlTOq8tQsvlmLcpPdjZg&oh=fdca8a3abc2904249e02beecff37b260&oe=5C548324"
+                        width="100%" height="100%" />
+            </div>
+
+        <form action="#">
+            <div class="form-container" id="photogInfo">
+              <label for="photogName">Photographer Name</label>
+              <input class="form-control" type="text" placeholder="Photographer Name" name="photogName" required>
+           
+              <label for="username">Username</label>
+              <input class="form-control" type="text" placeholder="username" name="username" required>
+              
+              <label for="email">Email</label>
+              <input class="form-control" type="text" placeholder="Email" name="email" required>
+            
+              <label for="date">Photograph Date</label>
+              <input class="form-control" type="text" placeholder="Date Taken" name="date" required>
+            
+              <label for="photogNotes">Notes</label>
+              <textarea type="notes" placeholder="Photograher Notes" name="photogNotes" required>
+              </textarea>
+            
+            </div>
+            </form>
+    </div>
+    <div class="button-container">
+                        <button><i class="material-icons" id="uploadPhoto">
+                            <a href="#">add_a_photo</a>
+                        </i></button>
+    </div>
+
+    <div class='map-wrapper'>
+         <div class='map-container'>
+            <div id='map'>
+                    
+            </div>
+        </div>
+    </div>
+                        <div class='photo-container' id='userPhotos'>
+                                <h2>PHOTOS TAKEN HERE</h2>
+                            </div>
+                        </div>
+                    
+                    
+                    
+                        <script type="text/javascript" src="./js/index.js"></script>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjbDoKRMqTrnjd-CZ4u6vp3l5UR1e2b84&callback=initMap"
+                            type="text/javascript">
+                            </script>
+          
+
+    
+    
+    <script type="text/javascript" src="profile.js"></script>
+</body>
+</html>
