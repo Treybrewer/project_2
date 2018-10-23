@@ -179,7 +179,7 @@ button,
 }
 
 /* Full-width input fields */
-input[type=text] {
+/* input[type=text] {
     width: 50%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -191,7 +191,9 @@ input[type=text] {
   input[type=text]:focus {
     background-color: #ddd;
     outline: none;
-  }
+  } */
+  label 
+  
 
   textarea {
     width: 50%;
