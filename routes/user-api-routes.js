@@ -26,6 +26,26 @@ module.exports = function(app) {
     });
   });
 
+  // app.get("/api/users/:username", function(req, res) {
+  //   // Here we add an "include" property to our options in our findOne query
+  //   // We set the value to an array of the models we want to include in a left outer join
+  //   // In this case, just db.Photos
+  //   db.Users.findOrCreate({
+  //     where: {
+  //       username: req.params.username
+  //     },
+  //     include: [db.Photos]
+  //   }).then(function(dbUsers) {
+  //     res.json(dbUsers);
+  //   });
+  // });
+
+  app.post("/api/users", function(req, res) {
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
   app.post("/api/users", function(req, res) {
     db.Users.create(req.body).then(function(dbUsers) {
       res.json(dbUsers);

@@ -1,20 +1,19 @@
 module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
     // Giving the Users model a name of type STRING
-    user_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false
+    id:{
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
     },
-    user_name: {
+    username: {
       type: DataTypes.STRING,
-      allowNull: false
     },
-    user_fname:{
-      type: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
     },
-    user_lname:{
-      type: DataTypes.STRING
+    email: {
+      type: DataTypes.STRING,
     },
     bio:{
       type: DataTypes.STRING
@@ -24,9 +23,7 @@ module.exports = function(sequelize, DataTypes) {
   Users.associate = function(models) {
     // Associating Users with photos
     // When an Users is deleted, also delete any associated photos
-    Users.hasMany(models.Photos, {
-      onDelete: "cascade"
-    });
+    Users.hasMany(models.Photos);
   };
 
   return Users;
