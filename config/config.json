@@ -5,7 +5,7 @@
     "database": "project2_db",
     "port": 3306,
     "host": "localhost",
-    "dialect": "mysql2"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
@@ -17,6 +17,6 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql2"
+    "dialect": "mysql"
   }
 }
