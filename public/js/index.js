@@ -38,10 +38,33 @@ window.smoothScroll = function(target) {
 
 function initMap() {
     
-    $.get("/api/markers", function(data) {
-        console.log(data);
-    });
+    var test = {
+        id: 1,
+        name: "Charlotte",
+        address: "800 S Mint St",
+        type: "Photo-Op",
+        lat: 8.897979,
+        lng: 8.897979
+    };
 
+    // testMarker(test);
+
+    // function testMarker(test) {
+    //     $.ajax({
+    //       method: "POST",
+    //       url: "/api/markers",
+    //       data: test
+    //     })
+    // };
+
+    function getTest() {
+        $.get("/api/markers", function(data) {
+            console.log(data);
+        });
+ 
+    };
+     
+    getTest();
     var options = {
         zoom: 13,
         center: { lat: 35.2271, lng: -80.8431 }

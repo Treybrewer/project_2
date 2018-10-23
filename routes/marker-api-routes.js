@@ -6,7 +6,7 @@ module.exports = function(app) {
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Photos
     db.Markers.findAll({
-      include: [db.Photos]
+      // include: [db.Photos]
     }).then(function(dbMarkers) {
       res.json(dbMarkers);
       console.log(`findAll markers: ${res}`);
