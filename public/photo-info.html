@@ -11,51 +11,91 @@
     <title>Profile</title>
 </head>
 <body>
-    <div class="navbar" id='nav'>
-        <ul>
-            <li><i class="material-icons" id='addPhoto'>
-                    <a href="#">add_a_photo</a>
-                </i></li>
-            <li><i class="material-icons" id='search'>
-                    search
-                </i></li>
-            <li><i class="material-icons" id='goToMap'>
-                    place
-                </i></li>
-            <li><i class="material-icons" id='profile'>
-                    account_circle
-                </i></li>
-        </ul>
+        <div class="navbar" id='nav'>
+                <ul>
+                    <li id='name'><a href="index.html">PHOTO</a>
+                        <i class="material-icons" id='logo'>
+                            camera
+                        </i>
+                        <a href="profile.html">NEST</li></a>
+                    <li>
+                        <i class="material-icons" id='addPhoto' onclick="smoothScroll(document.getElementById('video'))">
+                            <a href="">add_a_photo</a>
+                        </i>
+                    </li>
+                    <li>
+                        <i class="material-icons" id='search'>
+                            search
+                        </i>
+                    </li>
+        
+                    <li>
+                        <i class="material-icons" id='goToMap' onclick="smoothScroll(document.getElementById('map'))">
+                            place
+                        </i>
+                    </li>
+        
+                    <li>
+                        <i class="material-icons" id='profile'>
+                            <a href="profile.html">
+                                account_circle
+                        </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+    <div class="flex-container">
+            <div class="card" id="newUpload">
+                    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/1914098_10156750976590571_6955578944830398969_n.jpg?_nc_cat=105&_nc_eui2=AeHhWP3KV8p9uecvwmohIuiG4Dq-9yriY7VaV2kmyuizjiMPHVsyRqfSSf4UCbNapCOgyKaVEvtUqdz6NMDUyRRZ2dIlTOq8tQsvlmLcpPdjZg&oh=fdca8a3abc2904249e02beecff37b260&oe=5C548324"
+                        width="100%" height="100%" />
+            </div>
+
+        <form action="action_page.php">
+            <div class="form-container" id="photogInfo">
+              <label for="photogName">
+              <input type="text" placeholder="Photographer Name" name="photogName" required>
+              </label>
+              <label for="username">
+              <input type="text" placeholder="username" name="username" required>
+              </label>
+              <label for="email">
+              <input type="text" placeholder="Email" name="email" required>
+              </label>
+              <label for="date">
+              <input type="text" placeholder="Date Taken" name="date" required>
+              </label>
+              <label for="photogNotes">
+              <textarea type="notes" placeholder="Photograher Notes (Max 250 characters)" name="photogNotes" required>
+              </textarea>
+              </label>
+            </div>
+            </form>
+    </div>
+    <div class="button-container">
+                        <button><i class="material-icons" id="uploadPhoto">
+                            <a href="#">add_a_photo</a>
+                        </i></button>
     </div>
 
-
-    <form action="action_page.php">
-            <div class="form-container">
-              <h1>Please fill in photograph information.</h1>
-              <hr>
-
-              <label for="photogName"></label>
-              <input type="text" placeholder="Photographer Name" name="photogName" required>
-              
-              <label for="username"></label>
-              <input type="text" placeholder="Username" name="username" required>
-          
-              <label for="email"></label>
-              <input type="text" placeholder="Email" name="email" required>
-          
-              <label for="date"></label>
-              <input type="password" placeholder="Date Taken" name="date" required>
-          
-              <label for="photogNotes"></label>
-              <input type="notes" placeholder="Photograher Notes (Max 250 characters)" name="photogNotes" required>
-          
-          
-          
-              <div class="clearfix">
-                <button type="submit" class="submit" style="color: 3cc47c">Submit</button>
-              </div>
+    <div class='map-wrapper'>
+         <div class='map-container'>
+            <div id='map'>
+                    
             </div>
-          </form>
+        </div>
+    </div>
+                        <div class='photo-container' id='userPhotos'>
+                                <h2>PHOTOS TAKEN HERE</h2>
+                            </div>
+                        </div>
+                    
+                    
+                    
+                        <script type="text/javascript" src="./js/index.js"></script>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjbDoKRMqTrnjd-CZ4u6vp3l5UR1e2b84&callback=initMap"
+                            type="text/javascript">
+                            </script>
           
 
     
