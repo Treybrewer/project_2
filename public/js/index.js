@@ -96,32 +96,27 @@ function initMap() {
                 var lng = data[i].lng
                 
                 addMarker(lat, lng);
-                
-                function addMarker () {
-                    var marker = new google.maps.Marker({
-                        position: { lat, lng },
-                        map: map,
-                    });
-                };
-                
-                // this will create an editable info window 
-                var infowindow = new google.maps.InfoWindow({
-                    maxWidth: 200,
-                    content: data[i].address,
-                });
-                // will open info window with a click on the marker
-                marker.addListener('click', function () {
-
-                    infowindow.open(map, marker);
-                    smoothScroll(document.getElementById('userPhotos'));
-
-                });
 
             };
 
         });
 
+        function addMarker (lat, lng) {
+            var marker = new google.maps.Marker({
+                position: { lat, lng },
+                map: map,
+            });
 
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+                smoothScroll(document.getElementById('userPhotos'));
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                maxWidth: 200,
+                content: "test",
+            });
+        };
 
 
         // google.maps.event.addListener(infowindow, "closeclick", function () {
