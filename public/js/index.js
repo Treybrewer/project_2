@@ -93,18 +93,18 @@ function initMap() {
                      name: ${data[i].name}\n
                      test: 20
                 `);
-                var lat = data[i].lat;
-                var lng = data[i].lng
+                var newLat = data[i].lat;
+                var newLng = data[i].lng
                 
-                google.maps.event.addListener(map, 'click', addMarker(lat, lng));
+                google.maps.event.addListener(map, 'click', addMarker(newLat, newLng));
 
             };
 
         });
 
-        function addMarker (lat, lng) {
+        function addMarker (newLat, newLng) {
             var marker = new google.maps.Marker({
-                position: { lat, lng },
+                position: { newLat, newLng },
                 map: map,
             });
 
