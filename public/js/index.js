@@ -101,7 +101,7 @@ function initMap() {
                             lng: ${newLng}`)
 
                 var marker = new google.maps.Marker({
-                    position: { lat: newLat, lng: newLng },
+                    position: { lat: newLat, lng: -newLng },
                     map: map,
                 });
 
