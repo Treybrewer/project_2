@@ -38,24 +38,24 @@ window.smoothScroll = function (target) {
 
 function initMap() {
 
-    // var test = {
-    //     id: 1,
-    //     name: "Charlotte",
-    //     address: "800 S Mint St",
-    //     type: "Photo-Op",
-    //     lat: 8.897979,
-    //     lng: 8.897979
-    // };
+    var test = {
+        id: 2,
+        name: "Panthers Stadium",
+        address: "800 S Mint St",
+        type: "Photo-Op",
+        lat: 35.2258,
+        lng: 80.8528
+    };
 
-    // testMarker(test);
+    testMarker(test);
 
-    // function testMarker(test) {
-    //     $.ajax({
-    //       method: "POST",
-    //       url: "/api/markers",
-    //       data: test
-    //     })
-    // };
+    function testMarker(test) {
+        $.ajax({
+          method: "POST",
+          url: "/api/markers",
+          data: test
+        })
+    };
 
 
     var options = {
@@ -65,20 +65,6 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), options);
 
     dataRead();
-    // google.maps.event.addListener(map, 'click',
-
-    //     function (event) {
-    //         var lat = event.latLng.lat();
-    //         var lng = event.latLng.lng();
-    //         console.log(lat, lng);
-    //         addMarker(lat, lng);
-    //     }
-    // );
-
-
-
-
-
 
     function dataRead() {
         $.get("/api/markers", function (data) {
@@ -101,36 +87,23 @@ function initMap() {
                             lng: ${newLng}`)
 
                 var marker = new google.maps.Marker({
-                    position: { lat: newLat, lng: -newLng },
+                    position: { lat: newLat, lng: newLng },
                     map: map,
                 });
 
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                    smoothScroll(document.getElementById('userPhotos'));
+                });
+    
+                var infowindow = new google.maps.InfoWindow({
+                    maxWidth: 200,
+                    content: data[i].name,
+                });
             };
 
-            // google.maps.event.addListener(map, 'click', addMarker(newLat, newLng));
         });
 
-        // function addMarker(newLat, newLng) {
-        //     var marker = new google.maps.Marker({
-        //         position: { newLat, newLng },
-        //         map: map,
-        //     });
-
-        //     marker.addListener('click', function () {
-        //         infowindow.open(map, marker);
-        //         smoothScroll(document.getElementById('userPhotos'));
-        //     });
-
-        //     var infowindow = new google.maps.InfoWindow({
-        //         maxWidth: 200,
-        //         content: "test",
-        //     });
-        // };
-
-
-        // google.maps.event.addListener(infowindow, "closeclick", function () {
-
-        // });
 
     };
 
