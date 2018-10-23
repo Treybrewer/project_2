@@ -156,6 +156,21 @@ targets container */
     padding: 14px;
 }
 
+.form-control1 {
+    display: block;
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    margin-bottom: 16px; 
+    width: 35%;
+    margin-top: 16px;
+}
+   [type="text"] {color:#ccc;}
+   [type="notes"] {color: #ccc;}
+
+
 
 button,
 .submit {
