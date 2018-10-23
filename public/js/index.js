@@ -47,15 +47,15 @@ function initMap() {
         lng: 8.897979
     };
 
-    // testMarker(test);
+    testMarker(test);
 
-    // function testMarker(test) {
-    //     $.ajax({
-    //       method: "POST",
-    //       url: "/api/markers",
-    //       data: test
-    //     })
-    // };
+    function testMarker(test) {
+        $.ajax({
+          method: "POST",
+          url: "/api/markers",
+          data: test
+        })
+    };
 
     function getTest() {
         $.get("/api/markers", function(data) {
