@@ -37,12 +37,10 @@ window.smoothScroll = function(target) {
 };
 
 function initMap() {
-    // $.ajax({
-    //     method: "GET",
-    //     url: "/api/markers/"
-    //   }).then(
-    //       console.log(res)
-    //   );
+    
+    $.get("/api/markers", function(data) {
+        console.log(data);
+    });
 
     var options = {
         zoom: 13,
