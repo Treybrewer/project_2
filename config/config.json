@@ -1,9 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "wolfpack21",
-    "database": "project2_db",
-    "port": 3306,
+    "password": "root",
+    "database": "testdb",
     "host": "localhost",
     "dialect": "mysql"
   },
