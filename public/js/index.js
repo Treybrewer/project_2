@@ -64,7 +64,7 @@ function initMap() {
     }
     var map = new google.maps.Map(document.getElementById('map'), options);
 
-    addMarker();
+    dataRead();
     // google.maps.event.addListener(map, 'click',
 
     //     function (event) {
@@ -80,25 +80,30 @@ function initMap() {
 
 
 
-    function addMarker() {
+    function dataRead() {
         $.get("/api/markers", function (data) {
 
             for (var i = 0; i < data.length; i++) {
 
                 console.log(
-                    `address: ${data[i].address}\n
+                    `
+                     address: ${data[i].address}\n
                      lat: ${data[i].lat}\n
                      lng: ${data[i].lng}\n
                      name: ${data[i].name}\n
                 `);
                 var lat = data[i].lat;
                 var lng = data[i].lng
-
-                var marker = new google.maps.Marker({
-                    position: { lat, lng },
-                    map: map,
-                });
-
+                
+                addMarker(lat, lng);
+                
+                function addMarker () {
+                    var marker = new google.maps.Marker({
+                        position: { lat, lng },
+                        map: map,
+                    });
+                };
+                
                 // this will create an editable info window 
                 var infowindow = new google.maps.InfoWindow({
                     maxWidth: 200,
