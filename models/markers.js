@@ -1,4 +1,5 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) 
+{
     var Markers = sequelize.define("Markers", {
      
       id: {
