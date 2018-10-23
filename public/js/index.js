@@ -96,10 +96,11 @@ function initMap() {
                 var newLat = data[i].lat;
                 var newLng = data[i].lng
                 
-                google.maps.event.addListener(map, 'click', addMarker(newLat, newLng));
+                
 
             };
 
+            google.maps.event.addListener(map, 'click', addMarker(newLat, newLng));
         });
 
         function addMarker (newLat, newLng) {
