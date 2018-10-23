@@ -57,7 +57,7 @@ function initMap() {
     //     })
     // };
 
-    
+
     var options = {
         zoom: 13,
         center: { lat: 35.2271, lng: -80.8431 }
@@ -95,32 +95,37 @@ function initMap() {
                 `);
                 var newLat = data[i].lat;
                 var newLng = data[i].lng
-                
+
                 console.log(`
                             lat: ${newLat}\n
                             lng: ${newLng}`)
+
+                var marker = new google.maps.Marker({
+                    position: { newLat, newLng },
+                    map: map,
+                });
 
             };
 
             // google.maps.event.addListener(map, 'click', addMarker(newLat, newLng));
         });
 
-        function addMarker (newLat, newLng) {
-            var marker = new google.maps.Marker({
-                position: { newLat, newLng },
-                map: map,
-            });
+        // function addMarker(newLat, newLng) {
+        //     var marker = new google.maps.Marker({
+        //         position: { newLat, newLng },
+        //         map: map,
+        //     });
 
-            marker.addListener('click', function () {
-                infowindow.open(map, marker);
-                smoothScroll(document.getElementById('userPhotos'));
-            });
+        //     marker.addListener('click', function () {
+        //         infowindow.open(map, marker);
+        //         smoothScroll(document.getElementById('userPhotos'));
+        //     });
 
-            var infowindow = new google.maps.InfoWindow({
-                maxWidth: 200,
-                content: "test",
-            });
-        };
+        //     var infowindow = new google.maps.InfoWindow({
+        //         maxWidth: 200,
+        //         content: "test",
+        //     });
+        // };
 
 
         // google.maps.event.addListener(infowindow, "closeclick", function () {
