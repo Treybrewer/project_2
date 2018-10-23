@@ -91,11 +91,12 @@ function initMap() {
                      lat: ${data[i].lat}\n
                      lng: ${data[i].lng}\n
                      name: ${data[i].name}\n
+                     test: 20
                 `);
                 var lat = data[i].lat;
                 var lng = data[i].lng
                 
-                google.maps.event.addDomListener(window, 'load', addMarker(lat,lng));
+                google.maps.event.addDomListener(window, 'click', addMarker(lat,lng));
 
             };
 
