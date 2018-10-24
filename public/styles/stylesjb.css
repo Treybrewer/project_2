@@ -225,7 +225,8 @@ targets container */
     height: 300px; 
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);  
   }
-  
+
+
   label {
       font-size: .85rem;
       letter-spacing: 2px;
