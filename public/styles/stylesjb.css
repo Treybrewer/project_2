@@ -171,7 +171,7 @@ targets container */
    [type="notes"] {color: #ccc;}
 
 
-
+.submit,
 .cancelbtn,
 .signupbtn {
     background: #8e9eab;  
@@ -186,12 +186,13 @@ targets container */
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
     margin: 10px
 }
-
+.submit,
 .cancelbtn,
 .signupbtn {
     font-size: 16px;
     color: white;
 }
+.submit:hover,
 .signupbtn:hover,
 .cancelbtn:hover {
     font-size: 16px;
@@ -207,9 +208,13 @@ targets container */
     height: 300px;
     width: 300px;
     padding: 20px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: none;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 4px;
 }
 #newPhoto {
     border-radius: 25px;
@@ -234,6 +239,7 @@ targets container */
      border-left: 0;
      border-radius: 0;
      margin-bottom: 8px; 
+     width: 90%;
  }
     [type="text"] {color:#ccc;}
     [type="notes"] {color: #ccc;}
