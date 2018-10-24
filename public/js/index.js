@@ -36,6 +36,8 @@ window.smoothScroll = function (target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 };
 
+
+
 function initMap() {
 //Mock Data - need to disable when not testing
     // var test = {
