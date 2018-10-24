@@ -39,7 +39,7 @@ window.smoothScroll = function (target) {
 
 
 function initMap() {
-//Mock Data - need to disable when not testing
+
     // var test = {
     //     id: 2,
     //     name: "Panthers Stadium",
