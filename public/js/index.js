@@ -36,6 +36,8 @@ window.smoothScroll = function (target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 };
 
+
+
 function initMap() {
 
     // var test = {

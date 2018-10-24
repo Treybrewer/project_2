@@ -16,9 +16,9 @@ app.use(express.static("./public"));
 require("./routes/html-routes.js")(app);
 // require("./routes/api-routes.js")(app);
 
-require("./routes/user-api-routes.js")(app);
-require("./routes/photo-api-routes.js")(app);
-require("./routes/marker-api-routes.js")(app);
+require("./routes/users-api-routes.js")(app);
+require("./routes/photos-api-routes.js")(app);
+require("./routes/markers-api-routes.js")(app);
 
 
 db.sequelize.sync({}).then(function() {
@@ -26,3 +26,4 @@ db.sequelize.sync({}).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
