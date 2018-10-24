@@ -12,6 +12,7 @@
     transition: ease-in-out .5s;
     font-family: 'Lato', sans-serif;
     text-align: center;
+    z-index: 20;
 }
 
 .navbar ul li {
@@ -260,7 +261,7 @@ targets container */
 /* --- Map container --- */
 .map-container {
     max-width: 75%;
-    height: 260px;
+    height: 150px;
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0 auto;
@@ -289,7 +290,6 @@ targets container */
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     
 }
 
