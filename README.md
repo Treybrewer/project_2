@@ -3,6 +3,7 @@
 This describes a web application geared towards photographers, tourists, and general users. Users can view a map of an area that will display various points of interest and photos of these areas uploaded by other users. Users can upload photos and supply information about the area being photographed and the location where the photo was taken, allowing photographers to find "hot spots" for taking good photos.
 
 Git Hub:    https://github.com/Treybrewer/project_2.git
+Heroku:     https://cryptic-brushlands-53998.herokuapp.com/index.html
 
 Coding Requirements:
     • Must use a Node and Express Web Server
