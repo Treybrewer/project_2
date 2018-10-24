@@ -7,6 +7,17 @@ function initMap() {
     var map2 = new
         google.maps.Map(document.getElementById('map2'), options);
 
+    
+
+
+
+   
+
+    
+};
+
+$(document).ready(function() {
+
     google.maps.event.addListener(map2, 'click',
 
         function (event) {
@@ -14,14 +25,9 @@ function initMap() {
             var lng = event.latLng.lng();
             console.log(lat, lng);
             addMarker(lat, lng);
-            postData(lat, lng);
+           
         }
     );
-
-
-
-
-
 
     function addMarker(lat, lng) {
         // this will add a marker to the map given the lat/lng of the on click position
@@ -49,12 +55,6 @@ function initMap() {
 
     };
 
-    
-};
-
-
-
-$(document).ready(function() {
     var config = {
         apiKey: "AIzaSyCcKEpVTKofG1GLRR-FGgV8XZHS_GIC7Ec",
         authDomain: "project2-7f279.firebaseapp.com",
@@ -183,6 +183,8 @@ $(document).ready(function() {
     };
     
 });
+
+
 
 
 
