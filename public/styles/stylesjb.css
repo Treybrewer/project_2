@@ -73,6 +73,58 @@ body{
     font-family: "Lato";
     
 }
+
+/* upload modal */
+.modal {
+        display: flex;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        max-width: 100%; /* Full width */
+        height: 400px;
+        max-height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4);
+        justify-content: center;
+        align-items: center;
+}
+
+.model.closed {
+    display: none;
+}
+
+.modal-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    /* spacing as needed */
+    padding: 20px 50px 20px 20px;
+  
+    /* let it scroll */
+    overflow: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: left;
+    top:0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* profile.html 
 targets container */
 .flex-container {
