@@ -111,7 +111,3 @@ function initMap() {
 
 };
 
-
-
-
-
