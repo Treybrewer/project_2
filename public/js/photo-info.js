@@ -237,39 +237,25 @@ $(document).ready(function() {
 //         addUser(newUser, addMarker);
 //     };
 
-//     function addMarker(post, callback) {
-//         //data to go into markers table  
-//         console.log('adding marker')
-//         $.ajax({
-//             method: "POST",
-//             url: "/api/markers",
-//             data: post
-//         }).then(function (resp) {
-//             // response.json(resp.get('id'))
-//             console.log(resp.id);
-//             newMarkerId = resp.id;
 
-//             var newPhoto = {
-//                 UserId: newUserId,
-//                 MarkerId: newMarkerId,
-//                 photo_url: "../uploads/mathesonbridge.jpg",//photoURL,
-//                 photog_notes: $("#photogNotes").val(),
-//                 date: $("#date").val(),
-//             };
-
-//             callback(newPhoto);
-//         })
-//     };
-
-//     function addPhoto(post) {
-//         console.log('adding photo')
-//         $.ajax({
-//             method: "POST",
-//             url: "/api/photos",
-//             data: post
-//         }).then(function (resp) {
-//             console.log(resp);
-//         })
-//     };
-
-// });
+// empty form fields on submit click
+function emptyForm () {
+    $("#photogName").val("");
+    $("#username").val("");
+    $("#email").val("");
+    $("#address").val("");
+    $("#date").val("");
+    $("#photogNotes").val("");
+}
+// nav-bar functionality
+const nav = document.getElementById('nav');
+window.onscroll = function () {
+    if (window.pageYOffset > 100) {
+        nav.style.background = "#4D4e4f";
+        nav.style.boxShadow = "0px 4px 2px #33333";
+        nav.style.opacity = ".9";
+    } else {
+        nav.style.background = "transparent";
+        nav.style.boxShadow = "0px 4px 2px #33333";
+    }
+}
