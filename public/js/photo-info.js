@@ -14,6 +14,7 @@ function initMap() {
             var lng = event.latLng.lng();
             console.log(lat, lng);
             addMarker(lat, lng);
+            postData(lat, lng);
         }
     );
 
@@ -47,15 +48,36 @@ function initMap() {
 
 
     };
+
+    function postData(lat, lng) {
+        event.preventDefault();
+
+        var address = $("#address").val().trim();
+        var name = $("#photogInfo").val().trim();
+        var data = {
+            address: address,
+            name: name,
+            lat: lat,
+            lng: lng,
+        };
+        $(document).on("click", ".submit", ajaxCall(data));
+
+        function ajaxCall() {
+            $.ajax({
+                method: "POST",
+                url: "/api/users",
+                data: data
+            }).then(function (res) {
+                console.log(res);
+            })
+        };
+    };
 };
 
 
-$(document).on("click", ".submit", postData);
-
-function postData() {
 
 
-};
+
 
 
 // $(document).ready(function () {
@@ -77,16 +99,7 @@ function postData() {
 //         //name, email, username
 //         function addUser(post, callback) {
 //             console.log("adding user data");
-//             $.ajax({
-//                 method: "POST",
-//                 url: "/api/users",
-//                 data: post
-//             }).then(function (resp) {
-//                 console.log(resp);
-//                 newUserId = resp.id;
-
-//                 callback(newLocation, addPhoto);
-//             })
+//             
 //         };
 
 //         //capture variables
