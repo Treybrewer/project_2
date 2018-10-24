@@ -32,6 +32,12 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/users", function(req, res) {
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
   app.delete("/api/users/:id", function(req, res) {
     db.Users.destroy({
       where: {

@@ -1,17 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
   var Photos = sequelize.define("Photos", {
-    photo_id: {
+    id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      autoIncrement: true,
       primaryKey: true
-    },
-    user_id: {//I dont think this is needed. In routes, User is defined as HasMany photos and Photos belongsTo Users
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    marker_id: {//I dont think this is needed. In routes, User is defined as HasMany photos and Photos belongsTo Users
-      type: DataTypes.INTEGER,
-      allowNull: false
     },
     photo_url: {
       type: DataTypes.STRING,
@@ -25,12 +17,6 @@ module.exports = function(sequelize, DataTypes) {
     date: {
       type: DataTypes.DATE,
     }
-    // time: {
-    //   type: DataTypes.TIME,
-    // },
-    
-
-
   });
 
   Photos.associate = function(models) {
@@ -42,15 +28,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-
-  //ONCE NO PHOTOS REMAIN FOR A LOCATION, SHOULD THE MARKER EXIST?
-  // Photos.associate = function(models) {
-    // Associating Photos with Markers
-    // When an Photo is deleted, also delete any associated Markers
-  //   Photos.hasMany(models.Markers, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  Photos.associate = function(models) {
+    // We're saying that a Photo should belong to a User
+    // A Photos can't be created without an Users due to the foreign key constraint
+    Photos.belongsTo(models.Users, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
 
   return Photos;

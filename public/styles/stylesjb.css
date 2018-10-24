@@ -73,7 +73,8 @@ body{
     font-family: "Lato";
     
 }
-/* targets container */
+/* profile.html 
+targets container */
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -82,21 +83,22 @@ body{
     align-items: center;
     margin-top: 180px;
   }
-/* targets user information box */
 
-  #userInfo,
-  #photogInfo {
-      background: whitesmoke;
-      border: 1px solid  whitesmoke;
-      border-radius: 4px;
-      height: 300px;
-      width: 300px;
-      padding: 20px;
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+  /* targets user information box */
+  #userInfo
+  {
+    background: whitesmoke;
+    border: 1px solid  whitesmoke;
+    border-radius: 4px;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* targets user image box */
   #userImage,
-  #newPhoto {
+  {
     border-radius: 25px;
     background-position: center;
     width: 300px;
@@ -111,13 +113,14 @@ body{
       line-height: normal;
   }
 
+/* username */
   h6 {
       font-size: 12px;
       font-weight: lighter;
       line-height: 30px;
 
   }
-
+/* location */
   h2 {
     font-size: 12px;
     font-weight: lighter;
@@ -132,6 +135,7 @@ body{
     text-align: center;
 }
 
+
 .button-container{
     display: flex;
     justify-content: center;
@@ -143,7 +147,7 @@ body{
 
 /* CSS for form.html */
 
-#userInfo {
+#newUserInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,8 +156,24 @@ body{
     padding: 14px;
 }
 
-button,
-.submit {
+.form-control1 {
+    display: block;
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    margin-bottom: 16px; 
+    width: 35%;
+    margin-top: 16px;
+}
+   [type="text"] {color:#ccc;}
+   [type="notes"] {color: #ccc;}
+
+
+.submit,
+.cancelbtn,
+.signupbtn {
     background: #8e9eab;  
     text-decoration: none;
     border: none;
@@ -166,12 +186,15 @@ button,
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
     margin: 10px
 }
-
-.submit {
+.submit,
+.cancelbtn,
+.signupbtn {
     font-size: 16px;
     color: white;
 }
-.submit:hover {
+.submit:hover,
+.signupbtn:hover,
+.cancelbtn:hover {
     font-size: 16px;
     color: #3cc47c;
 }
@@ -179,15 +202,33 @@ button,
 /* photographer information */
 
 #photogInfo {
-    margin: 5px 0 22px 0;
-    display: inline-block;
+    background: whitesmoke;
+    border: 1px solid  whitesmoke;
+    border-radius: 4px;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: none;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 4px;
 }
+#newPhoto {
+    border-radius: 25px;
+    background-position: center;
+    width: 300px;
+    height: 300px; 
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 30px 0 rgba(0, 0, 0, 0.19);  
+  }
   
   label {
       font-size: .85rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: #ccc;
+      color: #111;
   }
   
  .form-control {
@@ -197,10 +238,11 @@ button,
      border-right: 0;
      border-left: 0;
      border-radius: 0;
-     margin-bottom: 3px; 
+     margin-bottom: 8px; 
+     width: 90%;
  }
-    [type="text"] {color:#111;}
-    [type="notes"] {color: #111;}
+    [type="text"] {color:#ccc;}
+    [type="notes"] {color: #ccc;}
   
   textarea {
     width: 90%;
@@ -211,7 +253,7 @@ button,
     background-color: transparent;
     font-size: 12px;
     resize: none;
-    margin-top: 3px;
+    margin-top: 10px;
   }
 /* --- Map container --- */
 .map-container {
