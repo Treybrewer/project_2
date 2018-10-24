@@ -6,18 +6,18 @@ Git Hub:    https://github.com/Treybrewer/project_2.git
 
 Coding Requirements:
     • Must use a Node and Express Web Server
-        - X
+        - ✓
     • Must be backed by a MySQL Database with a Sequelize ORM
-        - X
+        - ✓
     • Must have both GET and POST routes for retrieving and adding new data
-        - X
+        - ✓
     • Must be deployed using Heroku (with Data)
-        - X
+        - ✓
         - (heroku link here)
     • Must utilize at least one new library, package, or technology that we haven't discussed
         - X
     • Must have a polished frontend / UI
-        - X
+        - ✓
     • Must have folder structure that meets MVC Paradigm
         - ✓
     • Must meet good quality coding standards (indentation, scoping, naming)
