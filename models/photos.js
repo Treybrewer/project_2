@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Photos = sequelize.define("Photos", {
     id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
