@@ -172,8 +172,8 @@ targets container */
 
 
 
-button,
-.submit {
+.cancelbtn,
+.signupbtn {
     background: #8e9eab;  
     text-decoration: none;
     border: none;
@@ -187,11 +187,13 @@ button,
     margin: 10px
 }
 
-.submit {
+.cancelbtn,
+.signupbtn {
     font-size: 16px;
     color: white;
 }
-.submit:hover {
+.signupbtn:hover,
+.cancelbtn:hover {
     font-size: 16px;
     color: #3cc47c;
 }
