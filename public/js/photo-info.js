@@ -62,7 +62,7 @@ function initMap() {
         };
         $(document).on("click", ".submit", ajaxCall(data));
 
-        function ajaxCall() {
+        function ajaxCall(data) {
             $.ajax({
                 method: "POST",
                 url: "/api/users",
