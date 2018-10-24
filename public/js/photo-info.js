@@ -60,7 +60,7 @@ function initMap() {
             lat: lat,
             lng: lng,
         };
-        $(document).on("click", ".submit", ajaxCall(data));
+        $(".submit").on("click", ajaxCall(data));
 
         function ajaxCall(data) {
             $.ajax({
