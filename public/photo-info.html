@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/stylesjb.css">
     <script src="https://code.jquery.com/jquery.js"></script>
+    
     <title>Profile</title>
 </head>
-
 <body>
         <div class="navbar" id='nav'>
                 <ul>
@@ -45,17 +44,9 @@
                         </i>
                         </a>
                     </li>
-                    <li>
-                            <i class="material-icons" id="signUp">
-                                <a href="form.html">
-                                    add
-                                </a>
-                            </i>
-                        </li>
                 </ul>
             </div>
-            
-            
+
     <div class="flex-container">
             <div class="card" id="newPhoto">
                     <img src="">
@@ -71,10 +62,7 @@
               
               <label for="email">Email</label>
               <input class="form-control" type="text" placeholder="Email" name="email" id="email" required>
-
-              <label for="address">Address of Photo</label>
-              <input class="form-control" type="text" placeholder="Enter Address" name="addess" id="address" required>
-          
+            
               <label for="date">Photograph Date</label>
               <input class="form-control" type="text" placeholder="Date Taken" name="date"  id="date" required>
             
@@ -82,18 +70,21 @@
               <textarea type="notes" placeholder="Photograher Notes" name="photogNotes" id="photogNotes" required>
               </textarea>
 
+              <div id="filesubmit">
+                <input type="file" class="file-select" accept="image/*"/>
+                <button class="file-upload">Upload</button>
+              </div>
             </div>
         </form>
     </div>
     <div class="button-container">        
          <button type="submit" class="submit" style="color: 3cc47c">Submit Photo</button>              
     </div>
-  
 
     <div class='map-wrapper'>
-        <div class='map-container'>
-            <div id='map2'>
-
+         <div class='map-container'>
+            <div id='map'>
+                    
             </div>
         </div>
     </div>
@@ -103,9 +94,9 @@
                         </div>
                     
                     
-                        <!-- <script type="text/javascript" src="./js/photo-info.js"></script> -->
-                        <!-- <script type="text/javascript" src="./js/index.js"></script> -->
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBksHw7y0nWdNAFFeZ3J8Smk6k2xaSdp68&callback=initMap"
+                    
+                        <script type="text/javascript" src="./js/index.js"></script>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjbDoKRMqTrnjd-CZ4u6vp3l5UR1e2b84&callback=initMap"
                             type="text/javascript">
                             </script>
           
@@ -114,7 +105,9 @@
     <!-- Commenting out because it causes errors -->
     <!-- <script type="text/javascript" src="profile.js"></script> -->
     <script type="text/javascript" src="./js/photo-info.js"></script>
-    
-</body>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- <script type="text/javascript" src="./js/firebase-upload.js"></script> -->
 
+
+</body>
 </html>
