@@ -53,7 +53,7 @@ function initMap() {
 $(document).on("click", ".submit", postData);
 
 function postData() {
-    
+
 
 };
 
