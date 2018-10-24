@@ -147,7 +147,15 @@ $(document).ready(function () {
     };
 
 });
-
+// empty form fields on submit click
+function emptyForm () {
+    $("#photogName").val("");
+    $("#username").val("");
+    $("#email").val("");
+    $("#address").val("");
+    $("#date").val("");
+    $("#photogNotes").val("");
+}
 // nav-bar functionality
 const nav = document.getElementById('nav');
 window.onscroll = function () {
