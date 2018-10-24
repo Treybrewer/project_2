@@ -38,24 +38,24 @@ window.smoothScroll = function (target) {
 
 function initMap() {
 
-    var test = {
-        id: 2,
-        name: "Panthers Stadium",
-        address: "800 S Mint St",
-        type: "Photo-Op",
-        lat: 35.2258,
-        lng: 80.8528
-    };
+    // var test = {
+    //     id: 2,
+    //     name: "Panthers Stadium",
+    //     address: "800 S Mint St",
+    //     type: "Photo-Op",
+    //     lat: 35.2258,
+    //     lng: 80.8528
+    // };
 
-    testMarker(test);
+    // testMarker(test);
 
-    function testMarker(test) {
-        $.ajax({
-          method: "POST",
-          url: "/api/markers",
-          data: test
-        })
-    };
+    // function testMarker(test) {
+    //     $.ajax({
+    //       method: "POST",
+    //       url: "/api/markers",
+    //       data: test
+    //     })
+    // };
 
 
     var options = {
