@@ -241,9 +241,10 @@ targets container */
      border-radius: 0;
      margin-bottom: 8px; 
      width: 90%;
+     
  }
-    [type="text"] {color:#ccc;}
-    [type="notes"] {color: #ccc;}
+    [type="text"] {color:#333333;}
+    [type="notes"] {color: #333333;}
   
   textarea {
     width: 90%;
@@ -291,3 +292,12 @@ targets container */
 
     
 }
+
+#map2 {
+    height: 600px;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+    top: 73%;
+}
+
