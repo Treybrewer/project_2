@@ -5,14 +5,6 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    user_id: {//Needed for associating the User with the Photo table
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    marker_id: {//Needed for associating Marker with the photo table
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
     photo_url: {
       type: DataTypes.STRING,
     },
@@ -25,9 +17,6 @@ module.exports = function(sequelize, DataTypes) {
     date: {
       type: DataTypes.DATE,
     }
-    
-  },{
-    underscored: true
   });
 
   Photos.associate = function(models) {
