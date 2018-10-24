@@ -1,7 +1,7 @@
 $(document).ready(function() {
     /* global moment */
  
-    $(document).on("click", "#uploadPhoto", handleUpload);
+    $(document).on("click", ".submit", handleUpload);
     
     //global variables
     var newMarkerId;
